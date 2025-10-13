@@ -16,9 +16,9 @@ This project is tailored to enhance your expertise in modern software developmen
 ## Technology Stack
 
 1. Django - framework used to build restful APIs
-3. GraphQL - Database
-4. PostreQL - Database
-5. Docker - Used for containerization
+2. GraphQL - Database
+3. PostreQL - Database
+4. Docker - Used for containerization
 
 ## Team roles
 
