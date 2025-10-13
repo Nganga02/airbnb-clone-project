@@ -13,7 +13,7 @@ This project is tailored to enhance your expertise in modern software developmen
   5. Strengthen their ability to document and plan complex software projects effectively.
   6. Develop an understanding of integrating technologies like Django, MySQL, and GraphQL in a unified ecosystem.
 
-## Tech stack
+## Technology stack
 
 1. Django - framework used to build restful APIs
 3. GraphQL - Database
