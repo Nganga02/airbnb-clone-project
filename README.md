@@ -32,6 +32,7 @@ This project is tailored to enhance your expertise in modern software developmen
 | **QA Engineer** | Writes automated tests for APIs, validates endpoint correctness, performs performance testing, and ensures compliance with documentation and security standards. |
 
 ## Database Design
+---
 
 + Users: Both tenants and landlords
   Stores authentication credentials, profile information, and host/guest roles.  
@@ -39,46 +40,46 @@ This project is tailored to enhance your expertise in modern software developmen
   - One-to-Many with `Property` (a host can have many properties)  
   - One-to-Many with `Booking` (a user can have multiple bookings
     
-  1. email - email of the user for authentication
-  2. Phone number - linked to mobile payments
-  3. Name - Name of the user
-  4. isTenant(bool) - identifies if the user is a tenant or landlord 
+    1. email - email of the user for authentication
+    2. Phone number - linked to mobile payments
+    3. Name - Name of the user
+    4. isTenant(bool) - identifies if the user is a tenant or landlord 
 + Propery:
   Contains details about listings — title, description, price, location, amenities, etc.  
   **Relationships:**  
   - One-to-Many with `Booking`  
   - One-to-Many with `Review`
-    
-  1. Name - name of the property
-  2. Location - where the property is located
-  3. Reviews - a property can have reviews regarding the place
+  
+    1. Name - name of the property
+    2. Location - where the property is located
+    3. Reviews - a property can have reviews regarding the place
 + Bookings
   Manages reservation details including dates, guest info, and payment status.  
   **Relationships:**  
   - Many-to-One with `User` (guest)  
   - Many-to-One with `Property`
   
-  1. Time of booking
-  2. Duration of stay - how long a tenant is going to occupy the space
-  3. Amount
+    1. Time of booking
+    2. Duration of stay - how long a tenant is going to occupy the space
+    3. Amount
 + Reviews
   Stores user ratings and feedback for properties.  
   **Relationships:**  
   - Many-to-One with `User`  
   - Many-to-One with `Property`
 
-  1. Userid - used to tie a review to a user since a user can have multiple reviews
-  3. review - content of the review
+    1. Userid - used to tie a review to a user since a user can have multiple reviews
+    2. Review - content of the review
 + Payments
   Tracks transaction details including payment amount, date, and status.  
   **Relationships:**  
   - One-to-One with `Booking`
 
-  1. Time - time when the payment is made
-  2. UserId - used to identify who has made the payment
-  3. Confirmation code - For confiemation purposes
+    1. Time - time when the payment is made
+    2. UserId - used to identify who has made the payment
+    3. Confirmation code - For confiemation purposes
 
-
+---
 
 ## API Security
 
