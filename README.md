@@ -100,7 +100,7 @@ The backend implements multiple layers of security to protect user data and syst
 - Environment variables for sensitive credentials (`.env`).
 - Strict CORS policy for allowed frontend domains.
 
-## CI/CD Pipelines
+## CI/CD Pipeline
 
 The CI/CD setup automates testing, linting, building, and deployment using **GitHub Actions** and **Docker**.
 
