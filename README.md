@@ -16,16 +16,22 @@ This project is tailored to enhance your expertise in modern software developmen
 ## Technology Stack
 
 1. Django - framework used to build restful APIs
-2. GraphQL - Query language
-3. PostreQL - Database
-4. Docker - Used for containerization
-5. Github Actions, Kubernetees and Nginx - Deployment and Automation
-6. OpenAPI - API Documentation 
+2. GraphQL - Allows for flexible and efficient querying of data.
+3. PostreQL - A powerful relational database used for data storage.
+4. Celery - For handling asynchronous tasks such as sending notifications or processing payments.
+5. Redis - Used for caching and session management.
+6. Docker - Used for containerization
+7. Github Actions, Kubernetees and Nginx - Deployment and Automation
+8. OpenAPI - API Documentation 
 
 ## Team Roles
 
 | Role | Responsibilities |
 |------|------------------|
+| **Business Analyst** | Enriches a product development team with a profound understanding of business processes from various perspectives and the ability to shape up a software product that creates maximum business value.|
+| **Product Owner** | They define a business strategy, shape up the product vision, make sure it satisfies customer needs, and manage a product backlog.|
+| **Project Manager** | Responsible for distributing tasks across team members, planning work activities, and updating project status.|
+| **Software Architect** | An expert-level software engineer who makes executive software design decisions on behalf of an app development team.|
 | **Backend Developer** | Designs and implements RESTful and GraphQL APIs, defines database schemas, manages authentication and authorization, and develops business logic for bookings, payments, and reviews. |
 | **Database Administrator (DBA)** | Designs the relational database schema, optimizes queries through indexing and normalization, manages backups, and ensures data integrity and scalability. |
 | **DevOps Engineer** | Builds CI/CD pipelines, manages Docker containers and deployments, configures monitoring and logging, and ensures seamless scaling of backend services. |
@@ -34,7 +40,7 @@ This project is tailored to enhance your expertise in modern software developmen
 ## Database Design
 ---
 
-+ Users: Both tenants and landlords
++ Users: Both guest and host
   Stores authentication credentials, profile information, and host/guest roles.  
   **Relationships:**  
   - One-to-Many with `Property` (a host can have many properties)  
@@ -103,6 +109,9 @@ The backend implements multiple layers of security to protect user data and syst
 ## CI/CD Pipeline
 
 The CI/CD setup automates testing, linting, building, and deployment using **GitHub Actions** and **Docker**.
+
+This helps in faster and more reliable development, improved code quality through automated testing, Rapid deployment and testing
+
 
 ### **Pipeline Workflow**
 1. **Continuous Integration (CI)**
